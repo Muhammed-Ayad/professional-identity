@@ -1,0 +1,149 @@
+# ==============================================================================
+# PROFESSIONAL IDENTITY - GITIGNORE
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Sensitive Configuration & Secrets (CRITICAL)
+# ------------------------------------------------------------------------------
+**/config/passwords.yaml
+**/passwords.yaml
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+*.p12
+*.cer
+*.der
+**/key.properties
+**/firebase_service_account_key.json
+**/google-services.json
+**/GoogleService-Info.plist
+*.credentials
+
+# ------------------------------------------------------------------------------
+# 2. Serverpod & Server Artifacts
+# ------------------------------------------------------------------------------
+# Serverpod Cloud CLI tokens and session cache
+.scloud/
+
+# Embedded PostgreSQL runtime artifacts (data dir, sockets, pidfiles)
+.serverpod/
+
+# SQLite databases created by ephemeral tests
+**/sp_*.db*
+*.sqlite
+*.sqlite-journal
+
+# Compiled Flutter Web app served by Serverpod (large binary bundle)
+professional_identity_server/web/app/
+professional_identity_server/build/
+
+# ------------------------------------------------------------------------------
+# 3. Flutter & Dart Build Outputs
+# ------------------------------------------------------------------------------
+# Package resolution & tools
+.dart_tool/
+.dart-tool/
+.dartServer/
+.appstudio/
+.packages
+pubspec_overrides.yaml
+.pub/
+.pub-cache/
+
+# Conventional build directory
+build/
+**/build/
+
+# Flutter plugin dependencies cache
+.flutter-plugins
+.flutter-plugins-dependencies
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+
+# Dart documentation
+doc/api/
+**/doc/api/
+
+# ------------------------------------------------------------------------------
+# 4. Mobile Binaries & Release Artifacts (Keep repo small)
+# ------------------------------------------------------------------------------
+*.apk
+*.aab
+*.ipa
+*.app
+professional-identity-release.apk
+
+# Android build outputs
+android/app/debug/
+android/app/profile/
+android/app/release/
+**/android/.gradle/
+**/android/local.properties
+
+# iOS build outputs
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/app.zip
+ios/Flutter/flutter_assets/
+ios/ServiceDefinitions.json
+**/ios/Flutter/.last_build_id
+
+# Obfuscation & Symbolization maps
+app.*.symbols
+app.*.map.json
+*.symbols
+
+# ------------------------------------------------------------------------------
+# 5. Operating System Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ------------------------------------------------------------------------------
+# 6. IDEs & Editors
+# ------------------------------------------------------------------------------
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio Code (ignore local settings & mcp)
+.vscode/
+!.vscode/launch.json
+!.vscode/tasks.json
+.vscode/mcp.json
+mcp.json
+.mcp.json
+
+# Other editors
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.log
+
+# ------------------------------------------------------------------------------
+# 7. AI Assistants & Agent Environments
+# ------------------------------------------------------------------------------
+.dart_skills/
+.agents/
+.claude/
+.gemini/
+.cursor/
+.codex/

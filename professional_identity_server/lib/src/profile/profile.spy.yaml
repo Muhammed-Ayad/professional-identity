@@ -1,0 +1,27 @@
+class: Profile
+table: profile
+fields:
+  authUser: module:serverpod_auth_core:AuthUser?, relation(onDelete=Cascade)
+  handle: String
+  fullName: String
+  headline: String?
+  bio: String?
+  location: String?
+  currentRole: String?
+  yearsOfExperience: int?
+  availability: String?
+  contactEmail: String?
+  websiteUrl: String?
+  avatarUrl: String?
+  cvUrl: String?
+  isPublic: bool, default=true
+  createdAt: DateTime, default=now
+  updatedAt: DateTime, default=now
+
+indexes:
+  profile_handle_idx:
+    fields: handle
+    unique: true
+  profile_auth_user_id_idx:
+    fields: authUserId
+    unique: true

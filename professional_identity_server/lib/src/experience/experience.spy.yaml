@@ -1,0 +1,17 @@
+class: Experience
+table: experience
+fields:
+  profile: Profile?, relation(onDelete=Cascade)
+  company: String
+  jobTitle: String
+  startDate: DateTime
+  endDate: DateTime?
+  isCurrent: bool, default=false
+  description: String?
+  sortOrder: int, default=0
+  createdAt: DateTime, default=now
+  updatedAt: DateTime, default=now
+
+indexes:
+  experience_profile_id_idx:
+    fields: profileId

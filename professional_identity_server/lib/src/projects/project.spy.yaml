@@ -1,0 +1,21 @@
+class: Project
+table: project
+fields:
+  profile: Profile?, relation(onDelete=Cascade)
+  title: String
+  description: String?
+  role: String?
+  url: String?
+  repositoryUrl: String?
+  imageUrl: String?
+  technologies: List<String>
+  startDate: DateTime?
+  endDate: DateTime?
+  isOngoing: bool, default=false
+  sortOrder: int, default=0
+  createdAt: DateTime, default=now
+  updatedAt: DateTime, default=now
+
+indexes:
+  project_profile_id_idx:
+    fields: profileId

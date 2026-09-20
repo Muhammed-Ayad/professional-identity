@@ -1,0 +1,17 @@
+class: ProfileAnalyticsEvent
+table: profile_analytics_event
+fields:
+  profile: Profile?, relation(onDelete=Cascade)
+  eventType: String
+  target: String?
+  createdAt: DateTime, default=now
+
+indexes:
+  profile_analytics_profile_id_idx:
+    fields: profileId
+  profile_analytics_profile_type_idx:
+    fields: profileId, eventType
+  profile_analytics_profile_created_idx:
+    fields: profileId, createdAt
+  profile_analytics_profile_type_created_idx:
+    fields: profileId, eventType, createdAt

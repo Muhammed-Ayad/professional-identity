@@ -1,0 +1,20 @@
+class: ContactInquiry
+table: contact_inquiry
+fields:
+  profile: Profile?, relation(onDelete=Cascade)
+  senderName: String
+  senderEmail: String
+  subject: String
+  message: String
+  inquiryType: String, default='general'
+  isRead: bool, default=false
+  isArchived: bool, default=false
+  createdAt: DateTime, default=now
+
+indexes:
+  contact_inquiry_profile_idx:
+    fields: profileId
+  contact_inquiry_profile_status_idx:
+    fields: profileId, isRead, isArchived
+  contact_inquiry_created_idx:
+    fields: profileId, createdAt

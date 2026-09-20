@@ -1,0 +1,11 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: '^3.12.2'
+
+workspace:
+  - professional_identity_client
+  - professional_identity_server
+  - professional_identity_flutter
+

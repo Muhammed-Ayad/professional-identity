@@ -1,0 +1,14 @@
+class: Skill
+table: skill
+fields:
+  profile: Profile?, relation(onDelete=Cascade)
+  name: String
+  category: String?
+  yearsOfExperience: int?
+  sortOrder: int, default=0
+  createdAt: DateTime, default=now
+  updatedAt: DateTime, default=now
+
+indexes:
+  skill_profile_id_idx:
+    fields: profileId

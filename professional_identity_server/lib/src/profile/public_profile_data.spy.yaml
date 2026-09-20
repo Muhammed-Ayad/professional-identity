@@ -1,0 +1,20 @@
+class: PublicProfileData
+fields:
+  handle: String
+  fullName: String
+  headline: String?
+  bio: String?
+  location: String?
+  currentRole: String?
+  yearsOfExperience: int?
+  availability: String?
+  contactEmail: String?
+  websiteUrl: String?
+  avatarUrl: String?
+  cvUrl: String?
+  isPublic: bool
+  skills: List<Skill>
+  experiences: List<Experience>
+  projects: List<Project>
+  socialLinks: List<SocialLink>
+  customization: ProfileCustomization?

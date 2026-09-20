@@ -1,0 +1,4 @@
+class: DailyEventCount
+fields:
+  date: DateTime
+  count: int

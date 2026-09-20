@@ -1,0 +1,15 @@
+class: AnalyticsSummary
+fields:
+  totalProfileViews: int
+  totalSocialLinkClicks: int
+  totalProjectClicks: int
+  totalCvViews: int
+  totalProfileShares: int
+  totalProfileLinkCopies: int?
+  totalQrProfileViews: int
+  totalQrDownloads: int?
+  totalEvents: int
+  socialLinkClicksByPlatform: List<NamedCount>
+  projectClicksByProject: List<NamedCount>
+  dailyProfileViews: List<DailyEventCount>
+  dailyTotalEvents: List<DailyEventCount>

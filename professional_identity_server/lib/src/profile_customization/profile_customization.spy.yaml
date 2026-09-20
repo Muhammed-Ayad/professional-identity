@@ -1,0 +1,16 @@
+class: ProfileCustomization
+table: profile_customization
+fields:
+  profile: Profile?, relation(onDelete=Cascade)
+  themePreset: String, default='minimal'
+  primaryColor: String?
+  backgroundStyle: String, default='solid'
+  cardStyle: String, default='outlined'
+  borderRadius: String, default='medium'
+  typographyStyle: String, default='modern'
+  updatedAt: DateTime, default=now
+
+indexes:
+  profile_customization_profile_idx:
+    fields: profileId
+    unique: true

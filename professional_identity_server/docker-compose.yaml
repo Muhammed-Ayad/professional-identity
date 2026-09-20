@@ -1,0 +1,44 @@
+services:
+  # Development services
+  postgres:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "8090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: professional_identity
+      POSTGRES_PASSWORD: "xkP_hxjMsuOpHNAzJL0gxii7asO1NGF4"
+    volumes:
+      - professional_identity_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6.2.6
+    ports:
+      - "8091:6379"
+    command: redis-server --requirepass "jtEwtENP4VAWxRQyDT6PIw3V_AK3FMFA"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  # Test services
+  postgres_test:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "9090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: professional_identity_test
+      POSTGRES_PASSWORD: "FZPSTkci3lZhzsUSfgNUXkFHtnnjvsCQ"
+    volumes:
+      - professional_identity_test_data:/var/lib/postgresql/data
+
+  redis_test:
+    image: redis:6.2.6
+    ports:
+      - "9091:6379"
+    command: redis-server --requirepass "jk817xxpgYU0ueh7peRQLz_VpiYC5fIN"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+volumes:
+  professional_identity_data:
+  professional_identity_test_data:

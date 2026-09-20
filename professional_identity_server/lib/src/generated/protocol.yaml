@@ -1,0 +1,61 @@
+analytics:
+  - recordPublicEvent:
+  - getAnalyticsSummary:
+emailIdp:
+  - startRegistration:
+  - login:
+  - verifyRegistrationCode:
+  - finishRegistration:
+  - startPasswordReset:
+  - verifyPasswordResetCode:
+  - finishPasswordReset:
+  - hasAccount:
+jwtRefresh:
+  - refreshAccessToken:
+cv:
+  - getMyCv:
+  - uploadCv:
+  - deleteCv:
+experience:
+  - getMyExperience:
+  - createExperience:
+  - updateExperience:
+  - deleteExperience:
+  - reorderExperience:
+greeting:
+  - hello:
+inquiry:
+  - submitPublicInquiry:
+  - getMyInquiries:
+  - markInquiryRead:
+  - archiveInquiry:
+  - deleteInquiry:
+profile:
+  - getMyProfile:
+  - getPublicProfile:
+  - isHandleAvailable:
+  - saveMyProfile:
+publicProfile:
+  - getPublicProfile:
+customization:
+  - getCustomization:
+  - updateCustomization:
+  - getPublicCustomization:
+project:
+  - getMyProjects:
+  - createProject:
+  - updateProject:
+  - deleteProject:
+  - reorderProjects:
+skill:
+  - getMySkills:
+  - createSkill:
+  - updateSkill:
+  - deleteSkill:
+  - reorderSkills:
+socialLink:
+  - getMySocialLinks:
+  - createSocialLink:
+  - updateSocialLink:
+  - deleteSocialLink:
+  - reorderSocialLinks:
