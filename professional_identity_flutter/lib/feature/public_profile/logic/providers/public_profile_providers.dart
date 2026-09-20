@@ -9,8 +9,8 @@ final publicProfileRepositoryProvider = Provider<PublicProfileRepository>((
   return PublicProfileRepository(ref.watch(clientProvider));
 });
 
-final publicProfileFamilyProvider =
-    FutureProvider.autoDispose.family<PublicProfileData?, String>((
+final publicProfileFamilyProvider = FutureProvider.autoDispose
+    .family<PublicProfileData?, String>((
       ref,
       handle,
     ) async {

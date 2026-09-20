@@ -49,7 +49,8 @@ Handler seoMiddleware(Handler next) {
 
     // Build and serve the SEO HTML using the existing static helper
     final requestHost =
-        request.headers.host?.toString() ?? 'app.professionalidentity.dev';
+        request.headers.host?.toString() ??
+        'professional-identity.serverpod.space';
     final scheme = request.url.scheme.isNotEmpty ? request.url.scheme : 'https';
 
     final userAgent = (request.headers.userAgent ?? '').toLowerCase();

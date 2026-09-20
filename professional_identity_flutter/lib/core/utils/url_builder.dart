@@ -21,7 +21,7 @@ class PublicProfileUrlBuilder {
   }
 
   /// Resolves the base origin / domain for the application.
-  /// Defaults to configured base URL, or 'https://app.professionalidentity.dev'
+  /// Defaults to configured base URL, or 'https://professional-identity.serverpod.space'
   static String get baseUrl {
     if (_configuredBaseUrl != null && _configuredBaseUrl!.isNotEmpty) {
       return _configuredBaseUrl!;
@@ -37,7 +37,7 @@ class PublicProfileUrlBuilder {
           : ':${base.port}';
       return '${base.scheme}://${base.host}$portPart';
     }
-    return 'https://app.professionalidentity.dev';
+    return 'https://professional-identity.serverpod.space';
   }
 
   /// Builds the complete public profile URL for a given handle:

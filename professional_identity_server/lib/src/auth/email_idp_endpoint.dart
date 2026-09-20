@@ -24,4 +24,3 @@ class EmailIdpEndpoint extends EmailIdpBaseEndpoint {
     return super.startRegistration(session, email: email);
   }
 }
-

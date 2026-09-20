@@ -84,7 +84,8 @@ class PublicProfileSeoRoute extends Route {
 
     // Determine host and protocol for canonical URL
     final requestHost =
-        request.headers.host?.toString() ?? 'app.professionalidentity.dev';
+        request.headers.host?.toString() ??
+        'professional-identity.serverpod.space';
     final scheme = request.url.scheme.isNotEmpty ? request.url.scheme : 'https';
 
     final userAgent = (request.headers.userAgent ?? '').toLowerCase();
@@ -106,7 +107,7 @@ class PublicProfileSeoRoute extends Route {
   /// and JSON/HTML escaping for the given [profile].
   static String buildSeoHtml(
     Profile profile, {
-    String host = 'app.professionalidentity.dev',
+    String host = 'professional-identity.serverpod.space',
     String scheme = 'https',
     bool isCrawler = true,
   }) {

@@ -101,7 +101,9 @@ class AuthScreen extends HookConsumerWidget {
                               final errStr = error.toString();
                               if (screen == EmailFlowScreen.startRegistration ||
                                   errStr.contains('already registered') ||
-                                  errStr.contains('Invalid verification code')) {
+                                  errStr.contains(
+                                    'Invalid verification code',
+                                  )) {
                                 message =
                                     'This email address is already registered. Please sign in or use Forgot Password.';
                               } else {
@@ -124,7 +126,6 @@ class AuthScreen extends HookConsumerWidget {
                 ],
               ),
             ),
-
           ),
         ),
       ),
@@ -199,5 +200,3 @@ class _CustomSignInWidgetState extends State<_CustomSignInWidget> {
     );
   }
 }
-
-

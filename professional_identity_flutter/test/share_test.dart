@@ -30,7 +30,7 @@ void main() {
     test('Default base URL is used when unconfigured', () {
       PublicProfileUrlBuilder.setBaseUrl(null);
       final url = PublicProfileUrlBuilder.buildUrl('johndoe');
-      expect(url, 'https://app.professionalidentity.dev/u/johndoe');
+      expect(url, 'https://professional-identity.serverpod.space/u/johndoe');
     });
 
     test('Custom base URL with trailing slash is properly formatted', () {
