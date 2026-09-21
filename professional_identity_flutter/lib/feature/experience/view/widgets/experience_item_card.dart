@@ -71,14 +71,16 @@ class ExperienceItemCard extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 6),
-                      Row(
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        spacing: 8,
+                        runSpacing: 4,
                         children: [
                           Text(
                             dateRange,
                             style: theme.textTheme.bodySmall,
                           ),
-                          if (exp.isCurrent) ...[
-                            const SizedBox(width: 8),
+                          if (exp.isCurrent)
                             Container(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 6,
@@ -99,7 +101,6 @@ class ExperienceItemCard extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ],
                         ],
                       ),
                     ],
@@ -109,6 +110,12 @@ class ExperienceItemCard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
+                      visualDensity: VisualDensity.compact,
+                      padding: const EdgeInsets.all(4),
+                      constraints: const BoxConstraints(
+                        minWidth: 32,
+                        minHeight: 32,
+                      ),
                       icon: const Icon(Icons.edit_outlined, size: 18),
                       onPressed: () => EditExperienceDialog.show(
                         context,
@@ -116,6 +123,12 @@ class ExperienceItemCard extends StatelessWidget {
                       ),
                     ),
                     IconButton(
+                      visualDensity: VisualDensity.compact,
+                      padding: const EdgeInsets.all(4),
+                      constraints: const BoxConstraints(
+                        minWidth: 32,
+                        minHeight: 32,
+                      ),
                       icon: const Icon(Icons.delete_outline, size: 18),
                       color: theme.colorScheme.error,
                       onPressed: onDelete,
@@ -123,7 +136,10 @@ class ExperienceItemCard extends StatelessWidget {
                     ReorderableDragStartListener(
                       index: index,
                       child: const Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 4,
+                          vertical: 8,
+                        ),
                         child: Icon(
                           Icons.drag_handle_rounded,
                           color: Colors.grey,

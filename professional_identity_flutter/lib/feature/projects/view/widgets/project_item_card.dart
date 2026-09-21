@@ -123,6 +123,9 @@ class ProjectItemCard extends StatelessWidget {
                   ),
                 ),
                 IconButton(
+                  visualDensity: VisualDensity.compact,
+                  padding: const EdgeInsets.all(4),
+                  constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
                   icon: const Icon(Icons.edit_outlined, size: 18),
                   tooltip: 'Edit Project',
                   onPressed: () => EditProjectDialog.show(
@@ -131,6 +134,9 @@ class ProjectItemCard extends StatelessWidget {
                   ),
                 ),
                 IconButton(
+                  visualDensity: VisualDensity.compact,
+                  padding: const EdgeInsets.all(4),
+                  constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
                   icon: const Icon(Icons.delete_outline_rounded, size: 18),
                   tooltip: 'Delete Project',
                   onPressed: onDelete,
@@ -153,7 +159,7 @@ class ProjectItemCard extends StatelessWidget {
                 children: project.technologies.map((tech) {
                   return Container(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
+                       horizontal: 8,
                       vertical: 3,
                     ),
                     decoration: BoxDecoration(
@@ -175,9 +181,11 @@ class ProjectItemCard extends StatelessWidget {
             ],
             if (project.url != null || project.repositoryUrl != null) ...[
               const SizedBox(height: 12),
-              Row(
+              Wrap(
+                spacing: 8,
+                runSpacing: 6,
                 children: [
-                  if (project.url != null) ...[
+                  if (project.url != null)
                     ActionChip(
                       avatar: const Icon(
                         Icons.open_in_new_rounded,
@@ -188,9 +196,7 @@ class ProjectItemCard extends StatelessWidget {
                         UrlLauncherHelper.openUrl(context, project.url!);
                       },
                     ),
-                    const SizedBox(width: 8),
-                  ],
-                  if (project.repositoryUrl != null) ...[
+                  if (project.repositoryUrl != null)
                     ActionChip(
                       avatar: const Icon(
                         Icons.code_rounded,
@@ -204,7 +210,6 @@ class ProjectItemCard extends StatelessWidget {
                         );
                       },
                     ),
-                  ],
                 ],
               ),
             ],

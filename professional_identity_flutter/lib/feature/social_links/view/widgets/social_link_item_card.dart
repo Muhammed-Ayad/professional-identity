@@ -70,6 +70,10 @@ class SocialLinkItemCard extends StatelessWidget {
       key: ValueKey(link.id),
       margin: const EdgeInsets.only(bottom: 8),
       child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 10,
+          vertical: 2,
+        ),
         leading: Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
@@ -84,16 +88,24 @@ class SocialLinkItemCard extends StatelessWidget {
         ),
         title: Row(
           children: [
-            Text(
-              getPlatformDisplayName(link.platform),
-              style: const TextStyle(fontWeight: FontWeight.w600),
+            Flexible(
+              child: Text(
+                getPlatformDisplayName(link.platform),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontWeight: FontWeight.w600),
+              ),
             ),
             if (link.label != null && link.label!.isNotEmpty) ...[
-              const SizedBox(width: 8),
-              Text(
-                '• ${link.label!}',
-                style: theme.textTheme.bodySmall?.copyWith(
-                  color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+              const SizedBox(width: 6),
+              Flexible(
+                child: Text(
+                  '• ${link.label!}',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                  ),
                 ),
               ),
             ],
@@ -112,12 +124,18 @@ class SocialLinkItemCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             IconButton(
-              icon: const Icon(Icons.open_in_new_rounded, size: 18),
+              visualDensity: VisualDensity.compact,
+              padding: const EdgeInsets.all(3),
+              constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
+              icon: const Icon(Icons.open_in_new_rounded, size: 16),
               tooltip: 'Open Link',
               onPressed: () => UrlLauncherHelper.openUrl(context, link.url),
             ),
             IconButton(
-              icon: const Icon(Icons.copy_rounded, size: 18),
+              visualDensity: VisualDensity.compact,
+              padding: const EdgeInsets.all(3),
+              constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
+              icon: const Icon(Icons.copy_rounded, size: 16),
               tooltip: 'Copy URL',
               onPressed: () {
                 Clipboard.setData(ClipboardData(text: link.url));
@@ -130,21 +148,27 @@ class SocialLinkItemCard extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(Icons.edit_outlined, size: 18),
+              visualDensity: VisualDensity.compact,
+              padding: const EdgeInsets.all(3),
+              constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
+              icon: const Icon(Icons.edit_outlined, size: 16),
               onPressed: () => EditSocialLinkDialog.show(
                 context,
                 initialLink: link,
               ),
             ),
             IconButton(
-              icon: const Icon(Icons.delete_outline, size: 18),
+              visualDensity: VisualDensity.compact,
+              padding: const EdgeInsets.all(3),
+              constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
+              icon: const Icon(Icons.delete_outline, size: 16),
               color: theme.colorScheme.error,
               onPressed: onDelete,
             ),
             ReorderableDragStartListener(
               index: index,
               child: const Padding(
-                padding: EdgeInsets.all(8),
+                padding: EdgeInsets.symmetric(horizontal: 4, vertical: 6),
                 child: Icon(Icons.drag_handle_rounded, color: Colors.grey),
               ),
             ),

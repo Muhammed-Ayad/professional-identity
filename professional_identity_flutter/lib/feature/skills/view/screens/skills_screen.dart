@@ -180,6 +180,10 @@ class SkillsScreen extends HookConsumerWidget {
                             key: ValueKey(skill.id),
                             margin: const EdgeInsets.only(bottom: 8),
                             child: ListTile(
+                              contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 2,
+                              ),
                               leading: Container(
                                 padding: const EdgeInsets.all(8),
                                 decoration: BoxDecoration(
@@ -194,7 +198,10 @@ class SkillsScreen extends HookConsumerWidget {
                                   color: theme.colorScheme.primary,
                                 ),
                               ),
-                              title: Row(
+                              title: Wrap(
+                                crossAxisAlignment: WrapCrossAlignment.center,
+                                spacing: 8,
+                                runSpacing: 4,
                                 children: [
                                   Text(
                                     skill.name,
@@ -202,8 +209,8 @@ class SkillsScreen extends HookConsumerWidget {
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
-                                  if (skill.category != null) ...[
-                                    const SizedBox(width: 8),
+                                  if (skill.category != null &&
+                                      skill.category!.trim().isNotEmpty)
                                     Container(
                                       padding: const EdgeInsets.symmetric(
                                         horizontal: 8,
@@ -223,7 +230,6 @@ class SkillsScreen extends HookConsumerWidget {
                                         ),
                                       ),
                                     ),
-                                  ],
                                 ],
                               ),
                               subtitle: skill.yearsOfExperience != null
@@ -236,6 +242,12 @@ class SkillsScreen extends HookConsumerWidget {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   IconButton(
+                                    visualDensity: VisualDensity.compact,
+                                    padding: const EdgeInsets.all(4),
+                                    constraints: const BoxConstraints(
+                                      minWidth: 32,
+                                      minHeight: 32,
+                                    ),
                                     icon: const Icon(
                                       Icons.edit_outlined,
                                       size: 18,
@@ -246,6 +258,12 @@ class SkillsScreen extends HookConsumerWidget {
                                     ),
                                   ),
                                   IconButton(
+                                    visualDensity: VisualDensity.compact,
+                                    padding: const EdgeInsets.all(4),
+                                    constraints: const BoxConstraints(
+                                      minWidth: 32,
+                                      minHeight: 32,
+                                    ),
                                     icon: const Icon(
                                       Icons.delete_outline,
                                       size: 18,
@@ -256,7 +274,10 @@ class SkillsScreen extends HookConsumerWidget {
                                   ReorderableDragStartListener(
                                     index: index,
                                     child: const Padding(
-                                      padding: EdgeInsets.all(8),
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 4,
+                                        vertical: 8,
+                                      ),
                                       child: Icon(
                                         Icons.drag_handle_rounded,
                                         color: Colors.grey,
