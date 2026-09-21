@@ -27,7 +27,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: professional_identity_test
-      POSTGRES_PASSWORD: "FZPSTkci3lZhzsUSfgNUXkFHtnnjvsCQ"
+      POSTGRES_PASSWORD: "${SERVERPOD_PASSWORD_database:-FZPSTkci3lZhzsUSfgNUXkFHtnnjvsCQ}"
     volumes:
       - professional_identity_test_data:/var/lib/postgresql/data
 
@@ -35,7 +35,7 @@ services:
     image: redis:6.2.6
     ports:
       - "9091:6379"
-    command: redis-server --requirepass "jk817xxpgYU0ueh7peRQLz_VpiYC5fIN"
+    command: redis-server --requirepass "${SERVERPOD_PASSWORD_redis:-jk817xxpgYU0ueh7peRQLz_VpiYC5fIN}"
     environment:
       - REDIS_REPLICATION_MODE=master
 

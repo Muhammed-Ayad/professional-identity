@@ -147,3 +147,5 @@ mcp.json
 .gemini/
 .cursor/
 .codex/
+# Widget Preview related
+.widget_preview/
