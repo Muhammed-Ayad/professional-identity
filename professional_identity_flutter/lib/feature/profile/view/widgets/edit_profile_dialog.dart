@@ -163,6 +163,8 @@ class EditProfileDialog extends HookConsumerWidget {
                 ],
                 Expanded(
                   child: SingleChildScrollView(
+                    clipBehavior: Clip.none,
+                    padding: const EdgeInsets.only(top: 8, bottom: 8),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [

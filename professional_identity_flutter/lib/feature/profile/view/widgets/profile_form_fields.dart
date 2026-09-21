@@ -31,7 +31,7 @@ class ProfileBasicFields extends StatelessWidget {
                 controller: handleController,
                 enabled: enabled,
                 decoration: const InputDecoration(
-                  labelText: 'Handle / Username *',
+                  labelText: 'Username *',
                   hintText: 'e.g. mohamed-ayad',
                   prefixText: '/u/',
                 ),
