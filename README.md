@@ -1,10 +1,12 @@
 # Professional Identity 🚀
 
-### Full-Stack Digital Professional Identity Platform
+### Full-Stack Digital Professional Identity & Verified Portfolio Platform
 
-**Professional Identity** is a platform that helps developers and professionals create one place for all their professional information.
+**Professional Identity** is a modern, unified platform designed specifically for developers, engineers, and digital creators to consolidate their entire professional presence into a single, verified, high-converting digital identity.
 
-Instead of sharing separate links for your CV, LinkedIn, GitHub, Portfolio, Projects, and Skills, you can create one verified public profile with a unique handle and share it using a single link or QR code.
+Instead of circulating fragmented links across LinkedIn, GitHub, static PDF CVs, portfolio sites, and coding platforms, **Professional Identity** provides a single source of truth accessible through a custom handle (`/u/:handle`) or an instant dynamic QR code.
+
+Built entirely on the **Serverpod 4** and **Flutter** ecosystem, it delivers real-time customization, cloud-backed CV hosting, private client inquiry management, and privacy-conscious analytics — seamlessly responsive across Web, Android, and iOS.
 
 ---
 
@@ -12,63 +14,107 @@ Instead of sharing separate links for your CV, LinkedIn, GitHub, Portfolio, Proj
 
 - 🌐 **Web App**: [https://professional-identity.serverpod.space](https://professional-identity.serverpod.space)
 - 👤 **Example Profile**: [https://professional-identity.serverpod.space/u/mohamed-ayad](https://professional-identity.serverpod.space/u/mohamed-ayad)
-- 📱 **Android App (APK)**: [Download APK from Google Drive](https://drive.google.com/file/d/1MqJqqSLiBAwSGYR1TiC_0Ppc8Lwt-ZJX/view?usp=sharing)
+- 📱 **Android App (APK)**: [Download Release APK](https://drive.google.com/file/d/1MqJqqSLiBAwSGYR1TiC_0Ppc8Lwt-ZJX/view?usp=sharing)
 - 💻 **GitHub Repository**: [https://github.com/Muhammed-Ayad/professional-identity](https://github.com/Muhammed-Ayad/professional-identity)
 
 ---
 
-## ✨ Features
+## 📸 Application Showcase
 
-### 👤 Professional Profile
-- Create and manage your professional profile.
-- Add bio, skills, experience, and contact information.
-- Choose a unique profile handle (`/u/:handle`).
-- Toggle profile visibility between public and private.
+### 🌐 1. Public Profile & Visitor Experience
+Visitors can explore your verified bio, categorized technical stack, work experience timeline, featured projects, and contact channels without creating an account.
 
-### 💼 Portfolio & Projects
-- Add and showcase featured projects.
-- Add project descriptions, technology tags, and screenshots.
-- Add GitHub repository links and Live Demo buttons.
-- Add and organize work experience timeline.
+| Verified Header & Quick Actions | About & Categorized Tech Stack |
+| :---: | :---: |
+| <img src="Screenshots/06_public_profile_header.jpeg" width="340" alt="Public Profile Header" /> | <img src="Screenshots/07_public_profile_content.jpeg" width="340" alt="Public Profile Content" /> |
 
-### 📄 CV & Resume
-- Upload your CV as a PDF directly to cloud storage.
-- View and download your CV with 1-click from your public profile.
+---
 
-### 🔗 Social Links
-Connect all your professional platforms:
-- GitHub
-- LinkedIn
-- X (Twitter)
-- LeetCode
-- StackOverflow
-- Personal Website / Blog
-- Email
+### 📱 2. Mobile Dashboard & Instant Share
+Real-time completion tracking, quick status toggling, and native dynamic QR code generation for conferences, interviews, and networking.
 
-### 🎨 Profile Customization
-- Choose accent colors and gradient themes.
-- Customize profile card appearance.
-- Full support for dark and light themes.
+| Dashboard & Completion Tracker | Dynamic QR Code & Instant Share |
+| :---: | :---: |
+| <img src="Screenshots/04_dashboard_overview.jpeg" width="340" alt="Dashboard Overview" /> | <img src="Screenshots/05_share_identity_qr.jpeg" width="340" alt="Dynamic QR Code & Share" /> |
 
-### 📱 Sharing & QR Code
-- Dynamic QR code generation for your profile.
-- Download high-resolution QR codes.
-- 1-click link copy and native OS share dialog.
+---
 
-### 💬 Contact & Inquiries
-- Direct contact form on public profiles for recruiters and clients.
-- Profile owners can manage and view inquiries directly from their private dashboard inbox.
+### 🛠 3. Profile Content & Portfolio Management
+Full CRUD management with drag-to-reorder prioritization across all profile sections.
 
-### 📊 Analytics
-Profile owners can track basic engagement statistics:
-- Profile views
-- Project clicks (GitHub & Live Demo)
-- Social link clicks
-- CV views and downloads
-- Profile shares and link copies
-- QR code views and downloads
+| Skills & Tech Categorization | Featured Projects & Live Demos | Work Experience Timeline |
+| :---: | :---: | :---: |
+| <img src="Screenshots/08_skills_management.jpeg" width="240" alt="Skills Management" /> | <img src="Screenshots/09_projects_management.jpeg" width="240" alt="Projects Management" /> | <img src="Screenshots/10_experience_management.jpeg" width="240" alt="Experience Management" /> |
 
-> *The analytics system is designed to collect basic interaction metrics without storing any personal visitor data or tracking cookies.*
+| Professional Links & Networks | Cloud CV & Resume Management |
+| :---: | :---: |
+| <img src="Screenshots/11_links_management.jpeg" width="340" alt="Social & Professional Links" /> | <img src="Screenshots/12_cv_resume_management.jpeg" width="340" alt="CV & Resume Management" /> |
+
+---
+
+### 🎨 4. Real-time Appearance & Profile Customizer
+Personalize theme presets, accent colors, background styles, card aesthetics, and typography with an interactive live browser preview.
+
+| Theme Presets & Accents | Card Styling & Typography | Live Interactive Preview |
+| :---: | :---: | :---: |
+| <img src="Screenshots/13_appearance_themes_colors.jpeg" width="240" alt="Themes & Accent Colors" /> | <img src="Screenshots/14_appearance_cards_typography.jpeg" width="240" alt="Cards & Typography" /> | <img src="Screenshots/15_appearance_live_preview.jpeg" width="240" alt="Live Interactive Preview" /> |
+
+---
+
+### 📊 5. Analytics & Recruiter Inquiries
+Privacy-first engagement tracking without cookies, coupled with a private inbox for client proposals and recruiter inquiries.
+
+| Engagement & Overview Metrics | Traffic Charts & Top Links | Recruiter Inquiries Inbox |
+| :---: | :---: | :---: |
+| <img src="Screenshots/16_analytics_metrics_overview.jpeg" width="240" alt="Analytics Overview Metrics" /> | <img src="Screenshots/17_analytics_charts_traffic.jpeg" width="240" alt="Analytics Traffic Charts" /> | <img src="Screenshots/18_inquiries_inbox.jpeg" width="240" alt="Inquiries Inbox" /> |
+
+---
+
+### 🔐 6. Authentication & Account Recovery
+Serverpod-powered email authentication with secure session handling and self-service password recovery.
+
+| Secure Sign In | Easy Registration | Self-Service Password Reset |
+| :---: | :---: | :---: |
+| <img src="Screenshots/01_auth_signin.jpeg" width="240" alt="Sign In" /> | <img src="Screenshots/02_auth_signup.jpeg" width="240" alt="Sign Up" /> | <img src="Screenshots/03_auth_forgot_password.jpeg" width="240" alt="Reset Password" /> |
+
+---
+
+## ✨ Key Features
+
+### 👤 Professional Profile & Handle
+- Verified public profile with customizable handle (`/u/:handle`).
+- Rich headline, bio, location, and availability badge (e.g., *Available for opportunities*).
+- Instant visibility toggle between public and private.
+
+### 💼 Portfolio & Work Experience
+- Showcase featured projects with tech tags, description, GitHub links, and Live Demo buttons.
+- Chronological work experience timeline with roles, companies, dates, and achievements.
+- Intuitive drag-to-reorder interface to spotlight your best achievements.
+
+### 📄 Cloud CV & Resume Hosting
+- Upload PDF resumes directly into Serverpod Cloud Storage.
+- Integrated viewer and 1-click download button for recruiters.
+
+### 🔗 Consolidated Professional Hub
+- Connect GitHub, LinkedIn, X (Twitter), Portfolio, LeetCode, Stack Overflow, and custom links in one place.
+
+### 🎨 Live Theme & Appearance Engine
+- 4 curated theme presets: **Minimal**, **Modern**, **Professional**, and **Dark**.
+- 8 primary accent colors (Royal Blue, Indigo, Emerald, Violet, Rose, Amber, Teal, Slate).
+- Adjustable card styles (Glassmorphic, Elevated, Bordered, Flat) and font pairings.
+- Live in-app preview frame.
+
+### 📱 Dynamic QR Code & Sharing
+- Built-in dynamic QR code generator pointing to your public profile.
+- Save QR code as an image or share directly via native OS share sheets.
+
+### 💬 Direct Inquiries & Recruiter Inbox
+- Public contact form allowing recruiters and collaborators to reach out directly.
+- Private authenticated dashboard inbox with unread status indicators.
+
+### 📊 Privacy-First Analytics
+- Real-time tracking of profile visits, link clicks, CV downloads, and QR scans.
+- Visual charts and breakdowns without third-party tracking cookies or personal data retention.
 
 ---
 
